@@ -1,0 +1,204 @@
+/* Estilos generales */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('https://img.freepik.com/fotos-premium/diseno-aire-acondicionado-fondo-pantalla-hd-8k-imagen-fotografica-stock_890746-39745.jpg?w=826');
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  color: white; /* Asegura que el texto sea legible si el fondo es oscuro */
+  
+}
+
+.hero-title {
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center; /* Asegura que el título quede centrado */
+  filter: drop-shadow(10px 10px 5px rgba(5, 5, 5, 0.882));
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hero-description {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #fff; /* Asegura que el texto sea blanco o claro */
+  
+  /* Drop-shadow para resaltar el contenedor o texto en general */
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.8)); 
+
+  /* Text-shadow para resaltar las letras sobre fondos claros */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Sombra más pronunciada en las letras */
+}
+
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #181819bf;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.products-section {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.products-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* Espacio entre columnas y filas */
+  justify-items: center; /* Centra los elementos dentro de cada celda */
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* Asegura que cada carta ocupe el 100% de su contenedor */
+  max-width: 250px; /* Limita el ancho máximo de cada tarjeta */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para la transformación y la sombra */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar un efecto de elevación */
+}
+
+.product-image {
+  width: 100%;              /* La imagen ocupa todo el ancho del contenedor */
+  height: 200px;            /* Se establece una altura fija para todas las imágenes */
+  object-fit: contain;      /* Ajusta la imagen dentro del contenedor sin recortarla */
+  margin-bottom: 20px;
+  border-radius: 8px;       /* Bordes redondeados */
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #050505;
+}
+
+.product-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #575454f1;
+}
+
+.product-link {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product-link:hover {
+  background-color: #0056b3;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Para una animación suave al pasar el mouse */
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1); /* Agranda ligeramente el botón al pasar el mouse */
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}
+
+
+.home-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté por delante del fondo */
+  color: white; /* El texto blanco puede hacer que el contenido sea más legible */
+  padding: 20px;
+}
+
+/* Media Queries para responsive */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas para tabletas */
+  }
+
+  .hero-title {
+    font-size: 48px; /* Tamaño de fuente más pequeño en tabletas */
+  }
+
+  .hero-description {
+    font-size: 20px; /* Tamaño de fuente más pequeño en tabletas */
+  }
+
+  .cta-button {
+    font-size: 16px; /* Tamaño de fuente más pequeño en el botón */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 columna para móviles */
+    padding: 20px; /* Espaciado alrededor de la sección de productos */
+  }
+
+  .hero-title {
+    font-size: 36px; /* Tamaño de fuente más pequeño en móviles */
+  }
+
+  .hero-description {
+    font-size: 18px; /* Tamaño de fuente más pequeño en móviles */
+  }
+
+  .cta-button {
+    font-size: 14px; /* Tamaño de fuente más pequeño en el botón */
+    padding: 8px 16px; /* Tamaño de padding más pequeño */
+  }
+}
+@media (max-width: 768px) {
+  .whatsapp-button {
+    bottom: 60px; /* Ajusta la posición inferior, subiéndolo más en móviles */
+    right: 15px; /* Ajusta la posición derecha */
+    padding: 8px; /* Reduce el padding */
+  }
+
+  .whatsapp-icon {
+    width: 35px; /* Tamaño del icono en móviles */
+    height: 35px; /* Tamaño del icono en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button {
+    bottom: 60px; /* Sube aún más el botón en smartphones */
+    right: 10px; /* Ajusta la posición derecha */
+    padding: 6px; /* Reduce el padding */
+  }
+
+  .whatsapp-icon {
+    width: 30px; /* Tamaño del icono en smartphones */
+    height: 30px; /* Tamaño del icono en smartphones */
+  }
+}

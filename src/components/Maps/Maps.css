@@ -1,0 +1,32 @@
+.map-container {
+  width: 100%;
+  max-width: 500px; /* Limita el tamaño máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.map-image {
+  width: 100%; /* Ajusta el tamaño de la imagen */
+  height: 300px;
+  border-radius: 8px; /* Aplica bordes redondeados a la imagen */
+}
+
+@media (max-width: 1024px) {
+  .map-container {
+    max-width: 100%; /* Aumenta el tamaño máximo en tabletas */
+    padding: 10px; /* Ajusta el espaciado interno */
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    max-width: 95%; /* Aumenta el tamaño máximo en móviles */
+    padding: 5px; /* Reduce el espaciado interno */
+  }
+}
+
+@media (max-width: 480px) {
+  .map-image {
+    display: none; /* Oculta la imagen en pantallas de 480px o menos */
+  }
+}

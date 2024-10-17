@@ -1,0 +1,40 @@
+/* Footer.css */
+.footer {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco para contraste */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    bottom: 0;
+    
+    
+    
+}
+
+.footer-content {
+    max-width: 1200px; /* Limita el ancho máximo del contenido */
+    
+}
+
+.footer p {
+    margin: 0; /* Elimina márgenes */
+    font-size: 1rem;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 0; /* Reduce el espaciado interno en móviles */
+    }
+
+    .footer p {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p {
+        font-size: 0.8rem; /* Reduce aún más el tamaño de la fuente en pantallas pequeñas */
+    }
+}

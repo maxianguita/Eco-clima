@@ -1,0 +1,135 @@
+/* ContactForm.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #232423 0%, #232423 100%);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-page {
+  display: flex; /* Flexbox para alinear los elementos horizontalmente */
+  justify-content: center; /* Centra el contenido dentro del contenedor */
+  align-items: center; /* Alinea verticalmente */
+  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+}
+
+.contact-form-wrapper {
+  flex: 1; /* Toma el espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra el formulario dentro del wrapper */
+  align-items: center; /* Alinea verticalmente el formulario */
+}
+
+.contact-info {
+  flex: 1; /* Toma el espacio disponible */
+  padding: 20px; /* Espacio alrededor del texto */
+  text-align: left; /* Alinea el texto a la izquierda */
+  color: #333; /* Color del texto */
+}
+
+.contact-container {
+  background: #ffffff;
+  padding: 20px; /* Reducir padding para hacer el formulario más compacto */
+  border-radius: 10px; /* Un borde más pequeño */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 350px; /* Reducir el ancho máximo del formulario */
+  width: 100%;
+  animation: fadeIn 1s ease-out;
+  margin: 30px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-group input, .input-group textarea {
+  padding: 8px; /* Reducir el padding de los inputs */
+  font-size: 0.9rem; /* Tamaño de texto más pequeño */
+}
+
+.input-group label {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 2px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #74ebd5;
+  outline: none;
+}
+
+.input-group textarea {
+  height: 120px;
+  resize: none;
+}
+
+.submit-button {
+  background-color: #74ebd5;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #66d9ca;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Para pantallas más pequeñas como tablets y smartphones */
+@media (max-width: 768px) {
+  .contact-container {
+    max-width: 60%; /* Se reduce el ancho máximo para pantallas más pequeñas */
+    padding: 15px; /* Reducimos el padding */
+  }
+
+  .contact-form h2 {
+    font-size: 1.8rem; /* Reduce el tamaño del texto del título */
+  }
+
+  .submit-button {
+    font-size: 1rem; /* Reducimos el tamaño del texto en el botón */
+  }
+
+  .input-group input, .input-group textarea {
+    font-size: 0.9rem; /* Reducimos el tamaño del texto */
+  }
+}
+
+/* Para pantallas aún más pequeñas, como smartphones */
+@media (max-width: 480px) {
+  .contact-page {
+    display: none; /* Oculta toda la página de contacto en móviles */
+  }
+}

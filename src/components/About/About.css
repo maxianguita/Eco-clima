@@ -1,0 +1,106 @@
+/* About Container */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact-info {
+  margin-top: 40px;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-header-left h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.column {
+  width: 45%;
+}
+
+.column h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .contact-header {
+    flex-direction: column; /* Apila el contenido en columnas en pantallas más pequeñas */
+    align-items: flex-start; /* Alinea a la izquierda */
+  }
+
+  .contact-header-left h1 {
+    font-size: 28px; /* Reduce el tamaño de la fuente del encabezado */
+    margin-bottom: 10px; /* Añade un margen inferior para separar del siguiente contenido */
+  }
+
+  .contact-details {
+    flex-direction: column; /* Cambia a una disposición en columna */
+    margin-top: 20px; /* Mantiene el margen superior */
+  }
+
+  .column {
+    width: 100%; /* Cada columna ocupa el 100% del ancho disponible */
+    margin-bottom: 20px; /* Añade espacio entre las columnas */
+  }
+
+  .column h2 {
+    font-size: 18px; /* Reduce el tamaño del encabezado de la columna */
+  }
+
+  .column p {
+    font-size: 15px; /* Reduce el tamaño del párrafo */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container p {
+    font-size: 16px; /* Reduce el tamaño del texto en la sección "Acerca de" para pantallas pequeñas */
+  }
+
+  .contact-header-left h1 {
+    font-size: 24px; /* Reduce aún más el tamaño del encabezado en pantallas pequeñas */
+  }
+
+  .column h2 {
+    font-size: 16px; /* Ajusta el tamaño del encabezado de la columna */
+  }
+
+  .column p {
+    font-size: 14px; /* Ajusta el tamaño del párrafo para pantallas pequeñas */
+  }
+}
